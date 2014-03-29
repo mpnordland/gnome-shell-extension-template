@@ -1,11 +1,11 @@
 # Basic Makefile
 
-UUID = nos-dash@numixproject.org
+UUID = gnome-extension-template@micah.rehack.me
 BASE_MODULES = extension.js stylesheet.css metadata.json LICENSE.md README.md
-EXTRA_MODULES = freqView.js
+EXTRA_MODULES = 
 TOLOCALIZE =  
 INSTALLBASE = ~/.local/share/gnome-shell/extensions
-INSTALLNAME = nos-dash@numixproject.org
+INSTALLNAME = gnome-extension-template@micah.rehack.me
 
 all: extension
 
@@ -14,7 +14,7 @@ clean:
 
 extension: ./schemas/gschemas.compiled
 
-./schemas/gschemas.compiled: ./schemas/org.gnome.shell.extensions.nos-dash.gschema.xml
+./schemas/gschemas.compiled: ./schemas/org.gnome.shell.extensions.gnome-extension-template.gschema.xml
 	glib-compile-schemas ./schemas/
 
 install: install-local
